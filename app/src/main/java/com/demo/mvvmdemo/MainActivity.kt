@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity(), FilmsPresenter.View  {
         (application as MyApplication).appComponent.inject(this)
 
         presenter.setView(this)
-        presenter.loadUsers()
+        presenter.searchForFilms()
     }
 
     override fun showLoading() {

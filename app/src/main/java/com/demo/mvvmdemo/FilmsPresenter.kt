@@ -16,7 +16,7 @@ class FilmsPresenter @Inject constructor(val searchFilmsUseCase: SearchFilmsUseC
         this.view = view
     }
 
-    fun loadUsers() {
+    fun searchForFilms() {
         view.showLoading()
         compositeDisposable.add(searchFilmsUseCase.searchByName("car")
                 .subscribeOn(Schedulers.io())
